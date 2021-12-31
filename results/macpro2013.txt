@@ -1,0 +1,44 @@
+|--------------------------------------------|
+| Mac Pro (Late 2013)                        |
+| CPU: 3 GHz 8-Core Intel Xeon E5            |
+| Memory: 16 GB 1866 MHz DDR3                |
+| Author: Peter Širka                        |
+| Node: v17.0.1                              |
+|--------------------------------------------|
+
+------ delete-undefined.js
+[ delete ................................. slowest (avg. 36 ms, 4.22 MB) ]
+[ undefined .............................. +13.9% fastest (avg. 31 ms, 4.22 MB) ]
+
+------ foreach-for.js
+[ array.forEach .......................... slowest (avg. 16 ms, 4.29 MB) ]
+[ array.forEach cached ................... slowest (avg. 16 ms, 3.93 MB) ]
+[ array.for .............................. +31.3% fastest (avg. 11 ms, 3.93 MB) ]
+
+------ function-args.js
+[ Function args: inline .................. +33.3% fastest (avg. 4 ms, 3.93 MB) ]
+[ Function args: reference ............... slowest (avg. 6 ms, 4.18 MB) ]
+
+------ function-body-size.js
+[ Function: longer body .................. same performance (avg. 4 ms, 3.93 MB) ]
+[ Function: shorter body ................. same performance (avg. 4 ms, 3.93 MB) ]
+
+------ nexttick-immediate.js
+[ setImmediate ........................... slowest (avg. 6 ms, 2.01 MB) ]
+[ setTimeout(1) .......................... slowest (avg. 6 ms, 2.01 MB) ]
+[ nextTick ............................... +50.0% fastest (avg. 3 ms, 2.00 MB) ]
+
+------ regexp-caching.js
+[ No-cached .............................. slowest (avg. 9 ms, 4.72 MB) ]
+[ Cached ................................. +22.2% fastest (avg. 7 ms, 3.93 MB) ]
+
+------ string-chars.js
+[ string.charAt() ........................ slowest (avg. 5 ms, 3.93 MB) ]
+[ string[index] .......................... +40.0% fastest (avg. 3 ms, 3.93 MB) ]
+[ string.charCodeAt() .................... slowest (avg. 5 ms, 3.93 MB) ]
+
+------ timestamp.js
+[ new Date().getTime() ................... slowest (avg. 20 ms, 4.16 MB) ]
+[ Date.now() ............................. +40.0% fastest (avg. 12 ms, 3.85 MB) ]
+
+Duration: 6.933s
