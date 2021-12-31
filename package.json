@@ -1,0 +1,18 @@
+{
+	"name": "PerformanceTests",
+	"version": "1.0.0",
+	"main": "run.js",
+	"dependencies": {
+		"performancemeter": "latest"
+	},
+	"scripts": {
+		"start": "node run.js"
+	},
+	"keywords": [
+		"performance",
+		"tests",
+		"benchmark"
+	],
+	"author":"Peter Širka",
+	"license": "MIT"
+}
