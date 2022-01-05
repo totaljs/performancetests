@@ -8,7 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [17.x]
+        node: [16, 17]
         os:
           - ubuntu-latest
           - macos-latest
@@ -21,7 +21,7 @@ jobs:
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node-version }}
+          node: ${{ matrix.node-version }}
 
       - name: Install Performance Meter
         run: npm install
